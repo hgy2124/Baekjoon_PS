@@ -9,7 +9,7 @@ int main() {
 	cnt = 0;
 	for (; word[cnt] != '\0'; cnt++) {
 		n = word[cnt] - 'a';
-		if (idx[n] == -1) {
+		if (idx[n] == -1) { // 왜냐면 word가 null값이 나올때까지 반복되므로 필요
 			idx[n] = cnt;
 		}
 	}
