@@ -29,12 +29,12 @@ int main() {
 			vidx = i;
 			d = 0;
 		}
-		else if (v==idx[i] && v != 0) {
-			d=1;
+		else if (v == idx[i] && v != 0) {
+			d = 1;
 		}
 	}
 
-	if (d==1) {
+	if (d == 1) {
 		printf("?");
 	}
 	else {
