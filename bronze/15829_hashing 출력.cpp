@@ -1,20 +1,21 @@
 #include <stdio.h>
+#include <string.h>
 
-int L;
-unsigned long long num;
-long long R = 1, MOD = 1234567891;
-
-char str[51];
 int main() {
-    // freopen("input.txt", "r", stdin);
+	char s[1000001];
+	int wdcnt = 0, len = 0, i = 0;
+	fgets(s, 1000001, stdin); //fgets함수는 \n을 가져옴.
+	len = strlen(s);
+	for (; i < len; i++) {
+		if (s[i] == ' ')
+			wdcnt++;
+	}
+	wdcnt++;
 
-    scanf("%d %s", &L, str);
+	if (s[0] == ' ')
+		wdcnt -= 1;
+	if (s[len - 2] == ' ')
+		wdcnt--;
 
-    for (int i = 0; i < L; i++) {
-        num += (str[i] - 'a' + 1) * R; num %= MOD;
-
-        R *= 31; R %= MOD;
-    }
-
-    printf("%lu", num);
+	printf("%d", wdcnt);
 }
