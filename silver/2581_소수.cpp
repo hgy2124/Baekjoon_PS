@@ -6,7 +6,7 @@ int main() {
 	cin.tie(NULL);
 	ios_base::sync_with_stdio(false);
 
-	int m, n, sum = 0, cnt=1,first;
+	int m, n, sum = 0, cnt = 1, first;
 	cin >> m;
 	cin >> n;
 
@@ -17,7 +17,7 @@ int main() {
 					sum += i;
 					if (cnt == 1)
 						first = i;
-					cnt=0;
+					cnt = 0;
 				}
 				else {
 					break;
