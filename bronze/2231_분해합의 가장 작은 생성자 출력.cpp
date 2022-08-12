@@ -1,10 +1,12 @@
-#include <stdio.h>
+#include <iostream>
+
+using namespace std;
 
 int main() {
-	int n, m,a,b;
+	int n,a,b;
 
-	scanf("%d", &n);
-	
+	cin>>n;
+	int flag = 0;
 	for (int i = 1; i < n; i++) { 
 		a = i;
 		b = i;
@@ -15,12 +17,12 @@ int main() {
 		}
 	
 		if (b == n) {
-			printf("%d", i);
-			n = 0;
+			cout << i;
+			flag=1;
 			break;
 		}
 	}
 
-	if(n!=0)
-		printf("0");
+	if (flag == 0)
+		cout << 0;
 }
