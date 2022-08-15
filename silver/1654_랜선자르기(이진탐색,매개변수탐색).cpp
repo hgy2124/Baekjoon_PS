@@ -33,11 +33,11 @@ int main() {
 			sum += vt[i] / mid;
 		}
 		if (sum >= n) {
-			left = mid + 1;
+			left = left + 1;
 			mid = (left + max_num) / 2;
 		}
 		else if (sum < n) {
-			max_num = mid - 1;
+			max_num = max_num - 1;
 			mid = (left + max_num) / 2;
 		}
 			
