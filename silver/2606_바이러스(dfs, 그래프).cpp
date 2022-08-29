@@ -11,17 +11,6 @@ stack<int> s;
 bool visited[101];
 int cnt = 0;
 
-void dfs(int k) {
-	visited[k] = true;
-	s.push(k);
-	for (int i = 0; i < vt[k].size(); i++) {
-		if (visited[vt[k][i]] == 0) {
-			dfs(vt[k][i]);
-			cnt += 1;
-		}
-			
-	}
-}
 
 int main() {
 	cin.tie(NULL);
@@ -36,7 +25,7 @@ int main() {
 		vt[a].push_back(b);
 		vt[b].push_back(a);
 	}
-	dfs(1);
-	cout << cnt;
+
+	cout << vt[2];
 
 }
