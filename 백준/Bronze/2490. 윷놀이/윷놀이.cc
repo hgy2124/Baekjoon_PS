@@ -10,7 +10,7 @@ int main() {
 	ios_base::sync_with_stdio(false);
 	
 	int num;
-	string s = "EABCDE";
+	string s = "EABCD";
 
 	for (int i = 0; i < 3; i++) {
 		int arr[3] = { 0, };
