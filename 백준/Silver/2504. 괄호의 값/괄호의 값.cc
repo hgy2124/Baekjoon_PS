@@ -7,7 +7,7 @@ typedef long long ll;
 
 using namespace std;
 
-int main(void) {
+int main() {
 	cin.tie(0);
 	ios_base::sync_with_stdio(0);
 
