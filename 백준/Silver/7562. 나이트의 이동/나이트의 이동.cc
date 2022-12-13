@@ -39,7 +39,7 @@ int main() {
 			while (!q.empty() && !end) {
 				auto v = q.front();
 				q.pop();
-				for (int i = 0; i < 8 && !end; i++) {
+				for (int i = 0; i < 8; i++) {
 					int nx = v.first + dx[i];
 					int ny = v.second + dy[i];
 					if (nx == ex && ny == ey) {
