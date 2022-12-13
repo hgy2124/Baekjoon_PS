@@ -25,25 +25,35 @@ int main() {
 
 		queue<pair<int, int>> q;
 
-		for (int i = 0; i < l;i++) {
+		for (int i = 0; i < l;i++)
 			fill(visited[i], visited[i] + l, -1);
-		}
+
 		q.push({ x, y });
 		visited[x][y] = 0;
 
-		while (!q.empty()) {
-			auto v = q.front();
-			q.pop();
-			for (int i = 0; i < 8; i++) {
-				int nx = v.first + dx[i];
-				int ny = v.second + dy[i];
-				if (nx < 0 || nx >= l || ny < 0 || ny >= l)	continue;
-				if (visited[nx][ny] != -1)	continue;
-				visited[nx][ny] = visited[v.first][v.second] + 1;
-				q.push({ nx,ny });
+		bool end = false;
+
+		if (x == ex && y == ey)
+			cout << 0<<"\n";
+		else {
+			while (!q.empty() && !end) {
+				auto v = q.front();
+				q.pop();
+				for (int i = 0; i < 8 && !end; i++) {
+					int nx = v.first + dx[i];
+					int ny = v.second + dy[i];
+					if (nx == ex && ny == ey) {
+						cout << visited[v.first][v.second] + 1 << "\n";
+						end = true;
+						break;
+					}
+					if (visited[nx][ny] != -1)	continue;
+					if (nx < 0 || nx >= l || ny < 0 || ny >= l)	continue;
+					visited[nx][ny] = visited[v.first][v.second] + 1;
+					q.push({ nx,ny });
+				}
 			}
 		}
-		cout << visited[ex][ey] << "\n";
 	}
 	
 
