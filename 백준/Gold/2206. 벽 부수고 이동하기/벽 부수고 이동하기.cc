@@ -15,12 +15,6 @@ int N, M;
 int board[1002][1002];
 int dist[1002][1002][2];
 
-struct xyz {
-	int x;
-	int y;
-	bool z;
-};
-
 int main() {
 	cin.tie(0);
 	ios_base::sync_with_stdio(0);
